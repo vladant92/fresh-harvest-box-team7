@@ -1,0 +1,65 @@
+:root {
+  --text-font-family: DM Sans;
+  --text-color: #fff;
+}
+
+body {
+  background-color: #ae1332;
+}
+
+* {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-container .title {
+  color: var(--text-color);
+  text-align: center;
+  text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
+  font-family: var(--text-font-family);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 64px; /* 100% */
+  letter-spacing: -2.56px;
+  text-transform: uppercase;
+  padding-top: 64px;
+}
+
+.img-hero {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 500px;
+  background: #fff;
+}
+
+.svg-border {
+  width: 486px;
+  height: 742px;
+  flex-shrink: 0;
+}
+
+.info-paragraph {
+  color: var(--text-color);
+  text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.56px;
+  width: 222px;
+}
+
+.blocks-watermelon {
+  width: 249px;
+  height: 387px;
+  flex-shrink: 0;
+  border-radius: 500px;
+  background: #a4cb66;
+}
