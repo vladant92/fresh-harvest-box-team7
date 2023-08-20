@@ -47,7 +47,7 @@ body {
 .info-paragraph {
   color: var(--text-color);
   text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
-  font-family: DM Sans;
+  font-family: var(--text-font-family);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -57,9 +57,94 @@ body {
 }
 
 .blocks-watermelon {
-  width: 249px;
-  height: 387px;
-  flex-shrink: 0;
-  border-radius: 500px;
-  background: #a4cb66;
+    color: var(--text-color);
+text-align: center;
+text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
+font-family: var(--text-font-family);
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 14px; /* 116.667% */
+letter-spacing: -0.48px;
+width: 249px;
+height: 387px;
+flex-shrink: 0;
+border-radius: 500px;
+background: #a4cb66;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+}
+
+.blocks-watermelon p {
+    color: var(--text-color);
+text-align: center;
+text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
+font-family: var(--text-font-family);
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 14px; /* 116.667% */
+letter-spacing: -0.48px;
+text-transform: uppercase;
+width: 155px;
+}
+
+.blocks-strawberries {
+    color: var(--text-color);
+text-align: center;
+text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
+font-family: var(--text-font-family);
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 14px; /* 116.667% */
+letter-spacing: -0.48px;
+width: 249px;
+height: 387px;
+flex-shrink: 0;
+border-radius: 500px;
+background:#F5CE13;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+}
+
+.blocks-strawberries  p {
+    color: var(--text-color);
+text-align: center;
+text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
+font-family: var(--text-font-family);
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 14px; /* 116.667% */
+letter-spacing: -0.48px;
+text-transform: uppercase;
+width: 155px;
+}
+
+.section-blocks-hero .btn-hero {
+    display: inline-flex;
+padding: 12px 32px;
+align-items: flex-start;
+gap: 10px;
+border-radius: 1000px;
+border: 1px solid #FFF;
+color: #FFF;
+text-align: center;
+text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
+font-family: DM Sans;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 14px; /* 116.667% */
+letter-spacing: -0.48px;
+text-transform: uppercase;
+background-color: transparent;
+}
+
+.thumb img { 
+    background: transparent;
+
 }
