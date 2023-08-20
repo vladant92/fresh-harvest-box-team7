@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Harvest Box</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/yourorder.css">
+</head>
+<body>
+
+  <!---------------------Order ~ Modal Window-------------------------->
+  <section class="organic-fruits">
+    <button type="button" class="order-button" data-modal-open>
+      <svg class="arrow-down" width="14" height="14">
+        <use href=""></use>
+      </svg>
+      Order
+    </button>
+
+    <div class="order-modal is-hidden" data-modal>
+      <div class="modal-content">
+        <button class="modal-close-btn" data-modal-close>&times;
+        </button>
+        <span class="order-modal-title">Your Order</span>
+
+        <form class="form-info">
+          <fieldset class="fruits-order-cards">
+            <div class="fruits-order-container">
+              <input
+                type="checkbox" name="basket-selection"
+                class="fruits-order-selection visually-hidden" id="strawberry-option">
+              <label for="strawberry-option" class="strawberry-basket-card">
+                <span class="order-cards-text">
+                  <span class="order-cards-title">Strawberry Basket</span>
+                  <span class="order-cards-subtitle">Plant</span>
+                </span>
+
+                <picture class="fruits-order-img">
+                  <source media="(min-width: 1280px)"
+                    srcset="">
+                  <source media="(min-width: 768px)"
+                    srcset="">
+                  <source media="(min-width: 375px)"
+                    srcset="">
+                  <img src="" alt="">
+                </picture>
+              </label>
+            </div>
+
+            <div class="fruits-order-container">
+              <input
+                type="checkbox" name="basket-selection"
+                class="fruits-order-selection visually-hidden" id="apple-option">
+              <label for="apple-option" class="apple-basket-card">
+                <span class="order-cards-text">
+                  <span class="order-cards-title">Apple Basket</span>
+                  <span class="order-cards-subtitle">Plant</span>
+                </span>
+
+                <picture class="fruits-order-img">
+                  <source media="(min-width: 1280px)"
+                    srcset="">
+                  <source media="(min-width: 768px)"
+                    srcset="">
+                  <source media="(min-width: 375px)"
+                    srcset="">
+                  <img src="" alt="">
+                </picture>
+              </label>
+            </div>
+
+            <div class="fruits-order-container">
+              <input
+                type="checkbox" name="basket-selection"
+                class="fruits-order-selection visually-hidden" id="fruits-option">
+              <label for="fruits-option" class="fruits-basket-card">
+                <span class="order-cards-text">
+                  <span class="order-cards-title">Fruits Basket</span>
+                  <span class="order-cards-subtitle">Plant</span>
+                </span>
+
+                <picture class="fruits-order-img">
+                  <source media="(min-width: 1280px)"
+                    srcset="">
+                  <source media="(min-width: 768px)"
+                    srcset="">
+                  <source media="(min-width: 375px)"
+                    srcset="">
+                  <img src="" alt="">
+                </picture>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="order-info-fields">
+            <label class="modal-form-field">
+              <input
+                type="text" name=""
+                class="" placeholder="Enter full name..."
+                minlength="" required>
+            </label>
+
+            <label class="modal-form-field">
+              <input
+                type="text" name=""
+                class="" placeholder="Enter email..."
+                minlength="" required>
+            </label>
+
+            <label class="modal-form-field">
+              <input
+                type="text" name=""
+                class="" placeholder="Enter card.."
+                minlength="" required>
+            </label>
+
+            <label class="modal-form-field">
+              <textarea
+                name="" class=""
+                placeholder="Enter comments..."
+                minlength=""></textarea>
+            </label>
+
+            <button type="submit" class="modal-submit-btn">Submit</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
