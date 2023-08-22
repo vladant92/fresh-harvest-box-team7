@@ -9,7 +9,7 @@
     --anim-transition: .25s linear;
 }
 
-.container {
+.contacts-container {
     position: relative;
     max-width: 375px;
     padding: 0 20px;
@@ -18,14 +18,14 @@
 }
 
 @media screen and (min-width: 768px) {
-    .container {
+    .contacts-container {
         max-width:768px;
         padding: 0 32px;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .container {
+    .contacts-container {
         max-width:1280px;
     }
 }
@@ -36,7 +36,7 @@
     padding-top: 53px;
 }
 
-.contacts,.contacts-cont {
+.contacts-container,.contacts-cont {
     display: flex;
     flex-direction: column;
     align-items: center;
