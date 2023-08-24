@@ -1,0 +1,209 @@
+:root {
+    --primary-color: #ffffff;
+    --main-color: #ae1332;
+    --button-color: #a4cb66;
+    --secondary-color: #f5ce13;
+    --card-text-black: #000;
+    --font-family: DM Sans;
+    --text-shadow: 0px 4px 70px rgba(0, 0, 0, .1);
+    --anim-transition: .25s linear;
+}
+
+.contacts-container {
+    position: relative;
+    max-width: 375px;
+    padding: 0 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .contacts-container {
+        max-width:768px;
+        padding: 0 32px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .contacts-container {
+        max-width:1280px;
+    }
+}
+
+.contacts {
+    background-color: var(--main-color);
+    padding-bottom: 80px;
+    padding-top: 53px;
+}
+
+.contacts-container,.contacts-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts-title {
+    position: absolute;
+    top: -53px;
+    max-width: 335px;
+    z-index: 1;
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -.04em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    text-shadow: 0px 4px 70px 0px #0000001A;
+    padding: 0 20px;
+}
+
+.contacts-picture {
+    border-radius: 20px;
+}
+
+.contacts-picture.none {
+    display: none;
+}
+
+.contacts-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    margin-top: 20px;
+    max-width: 492px;
+}
+
+.contacts-text {
+    display: none;
+}
+
+.contacts-form {
+    position: relative;
+}
+
+.contacts-input {
+    width: 270px;
+    padding: 15px 0 15px 24px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -.04em;
+    background-color: var(--main-color);
+    color: var(--primary-color);
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+    border-color: #ffffff4d;
+    border-radius: 100px;
+    transition: border-color var(--anim-transition),outline var(--anim-transition);
+}
+
+.contacts-input::placeholder {
+    letter-spacing: -.04em;
+    color: var(--primary-color);
+    opacity: .5;
+}
+
+.contacts-input:hover,.contacts-input:focus {
+    border-color: #ffffff80;
+}
+
+.contacts-input:invalid:not(:placeholder-shown) {
+    outline: 2px solid red;
+    border: 1px solid transparent;
+}
+
+.contacts-btn-send {
+    position: absolute;
+    bottom: 0;
+    left: 168px;
+    display: flex;
+    align-items: center;
+    padding: 15px 35px;
+    height: 48px;
+    border-radius: 100px;
+    color: #fff;
+    background: #9dc162;
+    border-color: transparent;
+    font-size: 14px;
+    letter-spacing: -.04em;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: background-color var(--anim-transition);
+}
+
+.contacts-btn-send:hover {
+    background-color: #7aad55;
+}
+
+@media screen and (min-width: 768px) {
+    .contacts {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 79px;
+    }
+
+    .contacts-title {
+        max-width: 648px;
+        font-size: 54px;
+        line-height: 54px;
+        top: -79px;
+    }
+
+    .contacts-images {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 80px;
+    }
+
+    .contacts-picture.none {
+        display: block;
+    }
+
+    .contacts-bottom {
+        margin-top: 0;
+    }
+
+    .contacts-text {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.29;
+        letter-spacing: -.04em;
+        color: var(--primary-color);
+        text-shadow: 0 4px 70px rgba(0,0,0,.1);
+    }
+
+    .contacts-input {
+        width: 292px;
+    }
+
+    .contacts-btn-send {
+        left: 190px;
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+    .contacts {
+        padding-top: 89px;
+    }
+
+    .contacts-title {
+        max-width:740px;
+        font-size: 64px;
+        line-height: 1;
+        top: -89px;
+    }
+
+    .contacts-images {
+        gap: 24px;
+    }
+}
+
