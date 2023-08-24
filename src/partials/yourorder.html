@@ -1,38 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fresh Harvest Box</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/yourorder.css">
-</head>
-<body>
-
   <!---------------------Order ~ Modal Window-------------------------->
-  <section class="organic-fruits">
+
     <button type="button" class="order-button" data-modal-open>
       <svg class="arrow-down" width="14" height="14">
-        <use href=""></use>
+        <use href="../images/modals-icons.svg#icon-arrow-down"></use>
       </svg>
       Order
     </button>
 
+
     <div class="order-modal is-hidden" data-modal>
       <div class="modal-content">
-        <button class="modal-close-btn" data-modal-close>&times;
+        <button type="submit" class="modal-close-btn js-close-modal" data-modal-close>
+          <svg class="close-btn-svg" width="24" height="24">
+            <use href="../images/modals-icons.svg#icon-close"></use>
+          </svg>
         </button>
         <span class="order-modal-title">Your Order</span>
 
         <form class="form-info">
           <fieldset class="fruits-order-cards">
             <div class="fruits-order-container">
-              <input
+                <input
                 type="checkbox" name="basket-selection"
                 class="fruits-order-selection visually-hidden" id="strawberry-option">
-              <label for="strawberry-option" class="strawberry-basket-card">
+
+              <label for="strawberry-option" class="strawberry-basket-card card-layout">
+                <span class="basket-checked">
+                  <svg class="basket-icon-checked" width="6" height="6">
+                    <use href="../images/modals-icons.svg#icon-modals-check"></use>
+                  </svg>
+                </span>
                 <span class="order-cards-text">
                   <span class="order-cards-title">Strawberry Basket</span>
                   <span class="order-cards-subtitle">Plant</span>
@@ -40,21 +37,33 @@
 
                 <picture class="fruits-order-img">
                   <source media="(min-width: 1280px)"
-                    srcset="">
+                    srcset="
+                      ../images/modals-strawberry-basket.png 1x,
+                      ../images/modals-strawberry-basket-2x.png 2x">
                   <source media="(min-width: 768px)"
-                    srcset="">
+                    srcset="
+                      ../images/modals-strawberry-basket-t.png 1x,
+                      ../images/modals-strawberry-basket-t-2x.png 2x">
                   <source media="(min-width: 375px)"
-                    srcset="">
-                  <img src="" alt="">
+                    srcset="
+                      ../images/modals-strawberry-basket-m.png 1x,
+                      ../images/modals-strawberry-basket-m-2x.png 2x">
+                  <img src="../images/modals-strawberry-basket-m.png" alt="Strawberry Basket">
                 </picture>
               </label>
             </div>
 
             <div class="fruits-order-container">
-              <input
+                <input
                 type="checkbox" name="basket-selection"
                 class="fruits-order-selection visually-hidden" id="apple-option">
-              <label for="apple-option" class="apple-basket-card">
+
+              <label for="apple-option" class="apple-basket-card card-layout select-option">
+                <span class="basket-checked">
+                  <svg class="basket-icon-checked" width="6" height="6">
+                    <use href="../images/modals-icons.svg#icon-modals-check"></use>
+                  </svg>
+                </span>
                 <span class="order-cards-text">
                   <span class="order-cards-title">Apple Basket</span>
                   <span class="order-cards-subtitle">Plant</span>
@@ -62,21 +71,33 @@
 
                 <picture class="fruits-order-img">
                   <source media="(min-width: 1280px)"
-                    srcset="">
+                    srcset="
+                      ../images/modals-apple-basket.png 1x,
+                      ../images/modals-apple-basket-2x.png 2x">
                   <source media="(min-width: 768px)"
-                    srcset="">
+                    srcset="
+                      ../images/modals-apple-basket-t.png 1x,
+                      ../images/modals-apple-basket-t-2x.png 2x">
                   <source media="(min-width: 375px)"
-                    srcset="">
-                  <img src="" alt="">
+                    srcset="
+                      ../images/modals-apple-basket-m.png 1x,
+                      ../images/modals-apple-basket-m-2x.png 2x">
+                  <img src="../images/modals-apple-basket-m.png" alt="Apple Basket">
                 </picture>
               </label>
             </div>
 
             <div class="fruits-order-container">
-              <input
+                <input
                 type="checkbox" name="basket-selection"
                 class="fruits-order-selection visually-hidden" id="fruits-option">
-              <label for="fruits-option" class="fruits-basket-card">
+
+              <label for="fruits-option" class="fruits-basket-card card-layout select-option">
+                <span class="basket-checked">
+                  <svg class="basket-icon-checked" width="6" height="6">
+                    <use href="../images/modals-icons.svg#icon-modals-check"></use>
+                  </svg>
+                </span>
                 <span class="order-cards-text">
                   <span class="order-cards-title">Fruits Basket</span>
                   <span class="order-cards-subtitle">Plant</span>
@@ -84,12 +105,18 @@
 
                 <picture class="fruits-order-img">
                   <source media="(min-width: 1280px)"
-                    srcset="">
+                    srcset="
+                      ../images/modals-fruits-basket.png 1x,
+                      ../images/modals-fruits-basket-2x.png 2x">
                   <source media="(min-width: 768px)"
-                    srcset="">
+                    srcset="
+                      ../images/modals-fruits-basket-t.png 1x,
+                      ../images/modals-fruits-basket-t-2x.png 2x">
                   <source media="(min-width: 375px)"
-                    srcset="">
-                  <img src="" alt="">
+                    srcset="
+                      ../images/modals-fruits-basket-m.png 1x,
+                      ../images/modals-fruits-basket-m-2x.png 2x">
+                  <img src="../images/modals-fruits-basket-m.png" alt="Fruits Basket">
                 </picture>
               </label>
             </div>
@@ -98,30 +125,31 @@
           <fieldset class="order-info-fields">
             <label class="modal-form-field">
               <input
-                type="text" name=""
-                class="" placeholder="Enter full name..."
-                minlength="" required>
+                type="text" name="user-name"
+                class="modal-input-form" placeholder="Enter full name..."
+                minlength="3" required>
             </label>
 
             <label class="modal-form-field">
               <input
-                type="text" name=""
-                class="" placeholder="Enter email..."
-                minlength="" required>
+                type="email" name="user-mail"
+                class="modal-input-form" placeholder="Enter email..."
+                required>
             </label>
 
             <label class="modal-form-field">
               <input
-                type="text" name=""
-                class="" placeholder="Enter card.."
-                minlength="" required>
+                type="tel" name="card-number"
+                class="modal-input-form" placeholder="Enter card.."
+                pattern="[0-9\s]{13,16}" maxlength="16"
+                required>
             </label>
 
-            <label class="modal-form-field">
+            <label class="modal-form-field modal-comment-layout">
               <textarea
-                name="" class=""
+                name="user-comment" class="modal-input-form modal-form-comment"
                 placeholder="Enter comments..."
-                minlength=""></textarea>
+                ></textarea>
             </label>
 
             <button type="submit" class="modal-submit-btn">Submit</button>
@@ -129,6 +157,5 @@
         </form>
       </div>
     </div>
-  </section>
-</body>
-</html>
+  <script src="././../js/yourorder.js"></script>
+

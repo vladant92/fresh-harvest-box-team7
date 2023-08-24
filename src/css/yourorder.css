@@ -1,0 +1,492 @@
+:root {
+  --primary-color: #ffffff;
+  --main-color: #ae1332;
+  --background-modal: #e03f5e;
+  --button-color: #a4cb66;
+  --secondary-color: #f5ce13;
+  --card-text-black: #000;
+  --text-shadow: 0px 4px 70px rgba(0, 0, 0, .1);
+  --anim-transition: .25s linear;
+  --font-family: 'DM Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+.order-button {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  gap: 4px;
+  padding: 26px 0;
+  color: #FFF;
+  text-align: center;
+  text-shadow: var(--text-shadow);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.285;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+  border-radius: 50%;
+  border: none;
+  transform: rotate(-14deg);
+  background-color: #9DC262;
+  cursor: pointer;
+  fill: var(--primary-color);
+  transition: .20s linear;
+}
+
+.order-button:hover {
+  color: #9DC262;
+  border: #9DC262;
+  fill: #9DC262;
+  background-color: var(--primary-color);
+  animation: button-effect 1.2s;
+}
+
+@keyframes button-effect {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    border-radius: 50%;
+    rotate: 360deg;
+  }
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  margin: -1px;
+}
+
+.order-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: 250ms ease, opacity 250ms ease;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: block;
+  margin: auto;
+  width: 335px;
+  max-width: 100%;
+  max-height: 100vh;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--primary-color);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+.order-modal.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.order-modal.is-hidden .modal-content {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.close-btn-svg {
+  background-color: transparent;
+  stroke: var(--main-color);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  stroke: var(--main-color);
+  transform: scale(0.96);
+  outline: none;
+}
+
+.order-modal-title {
+  display: block;
+  color: var(--main-color);
+  text-shadow: var(--text-shadow);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -1.12px;
+  text-transform: uppercase;
+  text-align: start;
+  min-width: 100%;
+  margin: 0 0 40px 0;
+}
+
+.form-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.fruits-order-cards {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  border: none;
+  margin-bottom: 40px;
+}
+
+.fruits-order-container {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.card-layout {
+  display: flex;
+  border-radius: 20px;
+  padding: 16px 32px 8px 20px;
+}
+
+.order-cards-title {
+  display: block;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: -0.72px;
+}
+
+.order-cards-subtitle {
+  display: block;
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.285;
+  letter-spacing: -0.28px;
+}
+
+.fruits-order-img {
+  margin-left: auto;
+}
+
+.strawberry-basket-card {
+  background: #F8766B;
+}
+
+.apple-basket-card {
+  background: #EDD251;
+}
+
+.fruits-basket-card {
+  background: #9DC262;
+}
+
+.fruits-order-selection {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  margin: 0;
+  opacity: 0;
+}
+
+.basket-checked {
+  position: absolute;
+  display: flex;
+  top: 14px;
+  right: 14px;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1.6px solid var(--primary-color);
+}
+
+.basket-icon-checked {
+  margin: auto;
+  fill: transparent;
+}
+
+.fruits-order-selection:checked + .card-layout .basket-checked .basket-icon-checked {
+  background-image: url('../images/modals-icon-check-.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  fill: var(--primary-color);
+  opacity: 1;
+}
+
+.apple-basket-card,
+.strawberry-basket-card,
+.fruits-basket-card {
+  transition: transform 0.2s linear;
+}
+
+.strawberry-basket-card:hover,
+.apple-basket-card:hover,
+.fruits-basket-card:hover {
+ box-shadow: rgba(117, 107, 111, 0.541) 0px 25px 20px -20px;
+ transform: scale(1.05);
+}
+
+.modal-form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.modal-input-form {
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 400;
+  outline: none;
+}
+
+.modal-input-form:hover,
+.modal-input-form:focus {
+  background-color: rgba(226, 87, 114, 0.3);
+  box-shadow: rgba(117, 107, 111, 0.541) 0px 20px 15px -15px;
+}
+
+.order-info-fields {
+  border: none;
+}
+
+.modal-input-form:invalid:not(:placeholder-shown)  {
+  border: 1px solid red;
+}
+
+.modal-input-form::placeholder {
+  border-color: var(--card-text-black);
+  color: var(--card-text-black);
+  opacity: 0.3;
+}
+
+.modal-comment-layout {
+  margin-bottom: 24px;
+  max-width: 100%;
+  border-radius: 20px;
+  border: none;
+}
+
+.modal-form-comment {
+  display: block;
+  width: 100%;
+  min-height: 132px;
+  padding: 14px 24px 0 15px;
+  border-radius: 20px;
+  resize: none;
+}
+
+.modal-submit-btn {
+  display: inline-block;
+  text-align: center;
+  top: 841px;
+  left: 20px;
+  width: 92px;
+  height: 42px;
+  border-radius: 100px;
+  background: #9DC162;
+  border: none;
+  color: var(--primary-color);
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
+  transform: scale(0.96);
+  outline: none;
+}
+
+/*---------------------Order ~ Modal Window- Media Section----------------------*/
+
+@media screen and (max-width: 374px) {
+  .order-modal,
+  .modal-content {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-info {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal-content {
+    padding: 40px;
+  }
+
+  .order-modal,
+  .modal-content {
+    width: 100%;
+    max-width: 704px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .order-modal {
+    max-width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: 250ms ease, opacity 250ms ease;
+    z-index: 1000;
+    backdrop-filter: blur(1px);
+  }
+
+  .form-info {
+    max-width: 360px
+  }
+
+  .fruits-order-img {
+    margin: auto;
+  }
+
+  .modal-close-btn {
+    width: 28px;
+    height: 28px;
+    top: 20px;
+  }
+
+  .close-btn-svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .fruits-order-cards {
+    display: flex;
+    gap: 12px;
+  }
+
+  .fruits-order-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .card-layout {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding: 40px 14px 14px 14px;
+    width: 200px;
+  }
+
+  .modal-submit-btn {
+    width: 114px;
+    height: 48px;
+  }
+
+  .modal-content {
+    max-width: 704px;
+    padding: 40px;
+    background-image: url('../images/modals-commercial-model-t.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+  }
+
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      .modal-content {
+        background-image: url('../images/modals-commercial-model-t-2x.png');
+        background-size: 290px;
+      }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+  .order-modal,
+  .modal-content {
+    width: 100%;
+    max-width: 891px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .order-modal {
+    max-width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: 250ms ease, opacity 250ms ease;
+    z-index: 1000;
+    backdrop-filter: blur(1px);
+  }
+
+  .fruits-order-cards {
+    display: flex;
+    gap: 20px;
+  }
+
+  .card-layout {
+    width: 257px;
+  }
+
+  .order-cards-title {
+    font-size: 24px;
+    line-height: 1.166;
+    letter-spacing: -0.96px;
+  }
+
+  .modal-content {
+    max-width: 891px;
+    background-image: url('../images/modals-commercial-model.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      .modal-content {
+        background-image: url('../images/modals-commercial-model-2x.png');
+        background-size: 471px;
+      }
+    }
+
+}
+
+
+
+
