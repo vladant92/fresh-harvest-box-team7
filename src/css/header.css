@@ -193,7 +193,13 @@ body {
 }
 
 .burger-icon {
-  fill: var(--main-color)
+  fill: var(--main-color);
+  cursor: pointer;
+  transition: fill var(--anim-transition)
+}
+
+.burger-icon:hover {
+  fill: var(--button-color)
 }
 
 .basket-button {
@@ -378,4 +384,6 @@ body {
   letter-spacing: -.04em;
   text-align: center;
   color: var(--main-color)
+}
+
 }
