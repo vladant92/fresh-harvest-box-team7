@@ -241,7 +241,7 @@
 }
 
 .fruits-order-selection:checked + .card-layout .basket-checked .basket-icon-checked {
-  background-image: url('../images/modals-icon-check-.svg');
+  background-image: url('../images/modals-icon-check-1.svg');
   background-repeat: no-repeat;
   background-position: center;
   fill: var(--primary-color);

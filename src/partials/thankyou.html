@@ -4,24 +4,24 @@
     <div class="thank-you-content">
       <button class="modal-popup-close-btn" data-popup-modal-close>
         <svg class="btn-popup-svg" width="24" height="24">
-            <use href="../images/modals-icons.svg#icon-close"></use>
+            <use href="images/modals-icons.svg#icon-close"></use>
         </svg>
       </button>
 
       <picture class="thank-you-img">
         <source media="(min-width: 1280px)"
           srcset="
-            ../images/modals-raspberry.png 1x,
-            ../images/modals-raspberry-2x.png 2x">
+            images/modals-raspberry.png 1x,
+            images/modals-raspberry-2x.png 2x">
         <source media="(min-width: 768px)"
           srcset="
-            ../images/modals-raspberry-t.png 1x,
-            ../images/modals-raspberry-t-2x.png 2x">
+            images/modals-raspberry-t.png 1x,
+            images/modals-raspberry-t-2x.png 2x">
         <source media="(min-width: 375px)"
           srcset="
-            ../images/modals-raspberry-m.png 1x,
-            ../images/modals-raspberry-m-2x.png 2x">
-        <img src="../images/modals-raspberry-m.png" alt="Rasberry">
+            images/modals-raspberry-m.png 1x,
+            images/modals-raspberry-m-2x.png 2x">
+        <img src="images/modals-raspberry-m.png" alt="Rasberry">
       </picture>
 
         <span class="thank-you-modal-title">THANK YOU</span>
@@ -33,5 +33,24 @@
       </p>
     </div>
   </div>
-  <script src="././../js/thankyou.js"></script>
+  <script>
+    (() => {
+      const refs = {
+        openModalBtn: document.querySelector('[data-popup-modal-open]'),
+        closeModalBtn: document.querySelector('[data-popup-modal-close]'),
+        modal: document.querySelector('[data-popup-modal]'),
+        form: document.querySelector('.contacts-form'),
+      };
+
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      function toggleModal() {
+        refs.modal.classList.toggle('popup-is-hidden');
+      }
+      refs.form.addEventListener('submit', popup => {
+        refs.modal.classList.toggle('popup-is-hidden');
+        popup.preventDefault();
+      });
+    })();
+  </script>
 

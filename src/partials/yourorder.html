@@ -1,18 +1,10 @@
   <!---------------------Order ~ Modal Window-------------------------->
 
-    <button type="button" class="order-button" data-modal-open>
-      <svg class="arrow-down" width="14" height="14">
-        <use href="../images/modals-icons.svg#icon-arrow-down"></use>
-      </svg>
-      Order
-    </button>
-
-
     <div class="order-modal is-hidden" data-modal>
       <div class="modal-content">
         <button type="submit" class="modal-close-btn js-close-modal" data-modal-close>
           <svg class="close-btn-svg" width="24" height="24">
-            <use href="../images/modals-icons.svg#icon-close"></use>
+            <use href="images/modals-icons.svg#icon-close"></use>
           </svg>
         </button>
         <span class="order-modal-title">Your Order</span>
@@ -27,7 +19,7 @@
               <label for="strawberry-option" class="strawberry-basket-card card-layout">
                 <span class="basket-checked">
                   <svg class="basket-icon-checked" width="6" height="6">
-                    <use href="../images/modals-icons.svg#icon-modals-check"></use>
+                    <use href="images/modals-icons.svg#icon-modals-check"></use>
                   </svg>
                 </span>
                 <span class="order-cards-text">
@@ -38,17 +30,17 @@
                 <picture class="fruits-order-img">
                   <source media="(min-width: 1280px)"
                     srcset="
-                      ../images/modals-strawberry-basket.png 1x,
-                      ../images/modals-strawberry-basket-2x.png 2x">
+                      images/modals-strawberry-basket.png 1x,
+                      images/modals-strawberry-basket-2x.png 2x">
                   <source media="(min-width: 768px)"
                     srcset="
-                      ../images/modals-strawberry-basket-t.png 1x,
-                      ../images/modals-strawberry-basket-t-2x.png 2x">
+                      images/modals-strawberry-basket-t.png 1x,
+                      images/modals-strawberry-basket-t-2x.png 2x">
                   <source media="(min-width: 375px)"
                     srcset="
-                      ../images/modals-strawberry-basket-m.png 1x,
-                      ../images/modals-strawberry-basket-m-2x.png 2x">
-                  <img src="../images/modals-strawberry-basket-m.png" alt="Strawberry Basket">
+                      images/modals-strawberry-basket-m.png 1x,
+                      images/modals-strawberry-basket-m-2x.png 2x">
+                  <img src="images/modals-strawberry-basket-m.png" alt="Strawberry Basket">
                 </picture>
               </label>
             </div>
@@ -61,7 +53,7 @@
               <label for="apple-option" class="apple-basket-card card-layout select-option">
                 <span class="basket-checked">
                   <svg class="basket-icon-checked" width="6" height="6">
-                    <use href="../images/modals-icons.svg#icon-modals-check"></use>
+                    <use href="images/modals-icons.svg#icon-modals-check"></use>
                   </svg>
                 </span>
                 <span class="order-cards-text">
@@ -72,17 +64,17 @@
                 <picture class="fruits-order-img">
                   <source media="(min-width: 1280px)"
                     srcset="
-                      ../images/modals-apple-basket.png 1x,
-                      ../images/modals-apple-basket-2x.png 2x">
+                      images/modals-apple-basket.png 1x,
+                      images/modals-apple-basket-2x.png 2x">
                   <source media="(min-width: 768px)"
                     srcset="
-                      ../images/modals-apple-basket-t.png 1x,
-                      ../images/modals-apple-basket-t-2x.png 2x">
+                      images/modals-apple-basket-t.png 1x,
+                      images/modals-apple-basket-t-2x.png 2x">
                   <source media="(min-width: 375px)"
                     srcset="
-                      ../images/modals-apple-basket-m.png 1x,
-                      ../images/modals-apple-basket-m-2x.png 2x">
-                  <img src="../images/modals-apple-basket-m.png" alt="Apple Basket">
+                      images/modals-apple-basket-m.png 1x,
+                      images/modals-apple-basket-m-2x.png 2x">
+                  <img src="images/modals-apple-basket-m.png" alt="Apple Basket">
                 </picture>
               </label>
             </div>
@@ -95,7 +87,7 @@
               <label for="fruits-option" class="fruits-basket-card card-layout select-option">
                 <span class="basket-checked">
                   <svg class="basket-icon-checked" width="6" height="6">
-                    <use href="../images/modals-icons.svg#icon-modals-check"></use>
+                    <use href="images/modals-icons.svg#icon-modals-check"></use>
                   </svg>
                 </span>
                 <span class="order-cards-text">
@@ -106,17 +98,17 @@
                 <picture class="fruits-order-img">
                   <source media="(min-width: 1280px)"
                     srcset="
-                      ../images/modals-fruits-basket.png 1x,
-                      ../images/modals-fruits-basket-2x.png 2x">
+                      images/modals-fruits-basket.png 1x,
+                      images/modals-fruits-basket-2x.png 2x">
                   <source media="(min-width: 768px)"
                     srcset="
-                      ../images/modals-fruits-basket-t.png 1x,
-                      ../images/modals-fruits-basket-t-2x.png 2x">
+                      images/modals-fruits-basket-t.png 1x,
+                      images/modals-fruits-basket-t-2x.png 2x">
                   <source media="(min-width: 375px)"
                     srcset="
-                      ../images/modals-fruits-basket-m.png 1x,
-                      ../images/modals-fruits-basket-m-2x.png 2x">
-                  <img src="../images/modals-fruits-basket-m.png" alt="Fruits Basket">
+                      images/modals-fruits-basket-m.png 1x,
+                      images/modals-fruits-basket-m-2x.png 2x">
+                  <img src="images/modals-fruits-basket-m.png" alt="Fruits Basket">
                 </picture>
               </label>
             </div>
@@ -157,5 +149,20 @@
         </form>
       </div>
     </div>
-  <script src="././../js/yourorder.js"></script>
+  <script>
+    (() => {
+      const refs = {
+        openModalBtn: document.querySelector('[data-modal-open]'),
+        closeModalBtn: document.querySelector('[data-modal-close]'),
+        modal: document.querySelector('[data-modal]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      function toggleModal() {
+        refs.modal.classList.toggle('is-hidden');
+      }
+    })();
+  </script>
 
