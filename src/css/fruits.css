@@ -1,3 +1,82 @@
+:root {
+    --primary-color: #ffffff;
+    --main-color: #ae1332;
+    --background-modal: #e03f5e;
+    --button-color: #a4cb66;
+    --secondary-color: #f5ce13;
+    --card-text-black: #000;
+    --text-shadow: 0px 4px 70px rgba(0, 0, 0, .1);
+    --anim-transition: .25s linear;
+    --font-family: 'DM Sans', sans-serif;
+  }
+
+.order-button {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    gap: 4px;
+    padding: 26px 0;
+    color: #FFF;
+    text-align: center;
+    text-shadow: var(--text-shadow);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.285;
+    letter-spacing: -0.56px;
+    text-transform: uppercase;
+    border-radius: 50%;
+    border: none;
+    transform: rotate(-14deg);
+    background-color: #9DC262;
+    cursor: pointer;
+    fill: var(--primary-color);
+    transition: .20s linear;
+}
+
+.order-button:hover {
+    color: #9DC262;
+    border: #9DC262;
+    fill: #9DC262;
+    background-color: var(--primary-color);
+    animation: button-effect 1.2s;
+}
+
+@keyframes button-effect {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        border-radius: 50%;
+        rotate: 360deg;
+    }
+}
+
+
+.fruits-container {
+    max-width: 375px;
+    padding: 0 20px 80px 20px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+@media screen and (min-width: 768px) {
+    .fruits-container {
+        max-width:768px;
+        padding: 0 32px 144px 32px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .fruits-container {
+        max-width:1280px;
+        padding-bottom: 150px;
+    }
+}
+
 .photo{
     background-color: #ae1332;
 }
@@ -15,8 +94,6 @@
 
 .photo-section-text {
     color: var(--primary-color);
-    width: 547px;
-    height: 54px;
     font-family: DM Sans;
     font-size: 14px;
     font-weight: 400;
@@ -34,7 +111,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-    margin-bottom: 44px
+    padding-bottom: 44px;
 }
 
 .photo-item {
@@ -154,7 +231,12 @@
     border: none;
     padding: 12px;
     height: 46px;
-    margin-top: 6px
+    margin-top: 6px;
+    transition: background var(--anim-transition)
+}
+
+.price-btn:hover {
+    background: #ffffffcc;
 }
 
 
@@ -165,7 +247,7 @@
         gap: 16px;
     }
 
-    .img{
+    .img {
         display: block;
         max-width: 100%;
         height: auto;
@@ -185,16 +267,13 @@
 }
 
 @media screen and (min-width: 1280px) {
-    .container{
-        max-width: 100%;
-    }
     .photo-list {
         display:flex;
         flex-wrap: wrap;
         gap: 24px;
     }
 
-    .img{
+    .img {
         display: block;
         max-width: 100%;
         height: auto;
