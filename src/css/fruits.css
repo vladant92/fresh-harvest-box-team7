@@ -232,11 +232,13 @@
     padding: 12px;
     height: 46px;
     margin-top: 6px;
-    transition: background var(--anim-transition)
+    transition: background var(--anim-transition),
+                transform var(--anim-transition);
 }
 
 .price-btn:hover {
-    background: #ffffffcc;
+    background: #ffffffe6;
+    transform: scale(1.03);
 }
 
 
