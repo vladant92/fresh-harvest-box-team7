@@ -63,6 +63,7 @@
 
 .contacts-picture {
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .contacts-picture.none {
